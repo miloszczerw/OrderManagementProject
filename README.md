@@ -2,107 +2,103 @@
 
 
 
-Aplikacja mobilna (Android) zintegrowana z backendem w chmurze \*\*Azure\*\*, służąca do wewnętrznego zarządzania procesami logistycznymi i statystykami zamówień w przedsiębiorstwie. System implementuje architekturę opartą o podział uprawnień (RBAC) dla ról \*\*Admin\*\* oraz \*\*Worker\*\*.
+Aplikacja mobilna (Android) zintegrowana z backendem w chmurze Azure, służąca do wewnętrznego zarządzania procesami logistycznymi i statystykami zamówień w przedsiębiorstwie. System implementuje architekturę opartą o podział uprawnień (RBAC) dla ról Admin oraz Worker.
 
 
 
-\## 🚀 Architektura i Technologie
+\## Architektura i Technologie
 
 
 
-\### Backend (.NET Core Web API)
+Backend (.NET Core Web API):
 
-\* \*\*Hosting:\*\* Azure App Service
+\* Hosting: Azure App Service
 
-\* \*\*Baza danych:\*\* Azure SQL Database (Entity Framework Core)
+\* Baza danych: Azure SQL Database (Entity Framework Core)
 
-\* \*\*Kolejkowanie asynchroniczne:\*\* Azure Queue Service (komunikaty o zmianach statusów)
+\* Kolejkowanie asynchroniczne: Azure Queue Service (komunikaty o zmianach statusów)
 
-\* \*\*Autoryzacja:\*\* JSON Web Token (JWT) z obsługą ról
-
-
-
-\### Frontend (Android / Kotlin)
-
-\* \*\*Architektura:\*\* MVVM (Model-View-ViewModel)
-
-\* \*\*Komponenty UI:\*\* RecyclerView (kafelkowa lista zamówień), CardView, niestandardowy wykres statystyk
-
-\* \*\*Komunikacja sieciowa:\*\* Retrofit2 + Coroutines (asynchroniczne zapytania HTTP)
+\* Autoryzacja: JSON Web Token (JWT) z obsługą ról
 
 
 
-\---
+Frontend (Android / Kotlin):
+
+\* Architektura: MVVM (Model-View-ViewModel)
+
+\* Komponenty UI: RecyclerView (kafelkowa lista zamówień), CardView, niestandardowy wykres statystyk
+
+\* Komunikacja sieciowa: Retrofit2 + Coroutines (asynchroniczne zapytania HTTP)
 
 
 
-\## 📱 Funkcjonalności Systemu
+\## Funkcjonalności Systemu
 
 
 
-\### 🔒 Moduł Autoryzacji
+Moduł Autoryzacji:
 
-\* Bezpieczna rejestracja (nowe konta domyślnie otrzymują rolę `Worker`) oraz logowanie.
+\* Bezpieczna rejestracja (nowe konta domyślnie otrzymują rolę Worker) oraz logowanie.
 
-\* Przechowywanie tokenu sesji i roli użytkownika w `SharedPreferences`.
-
-
-
-\### 📦 Zarządzanie Zamówieniami (Operacje CRUD)
-
-\* \*\*Pobieranie danych (GET):\*\* Dynamiczna lista zamówień prezentowana za pomocą wydajnego widoku `RecyclerView`.
-
-\* \*\*Tworzenie (POST):\*\* Formularz dodawania nowej paczki z automatycznym wyliczaniem sumy (`Price \* Quantity`) na backendzie.
-
-\* \*\*Usuwanie (DELETE):\*\* Intuicyjne usuwanie zamówienia z bazy danych poprzez pojedyncze kliknięcie kafelka.
+\* Przechowywanie tokenu sesji i roli użytkownika w SharedPreferences.
 
 
 
-\### 🛠️ Uprawnienia Administratora (Admin)
+Zarządzanie Zamówieniami (Operacje CRUD):
 
-\* \*\*Modyfikacja statusu (PATCH):\*\* Długie przytrzymanie kafelka otwiera okno dialogowe pozwalające zmienić status (`Pending` -> `Shipped` -> `Completed`), co automatycznie generuje komunikat w kolejce \*\*Azure Queue Service\*\*.
+\* Pobieranie danych (GET): lista zamówień prezentowana za pomocą widoku RecyclerView.
 
-\* \*\*Panel Statystyk:\*\* Dedykowany ekran analityczny wyświetlający łączny obrót finansowy oraz natywny wykres słupkowy proporcji statusów zamówień.
+\* Tworzenie (POST): formularz dodawania nowej paczki z automatycznym wyliczaniem sumy (Price \* Quantity) na backendzie.
 
-
-
-\---
+\* Usuwanie (DELETE): usuwanie zamówienia z bazy danych poprzez kliknięcie kafelka.
 
 
 
-\## 📸 Zrzuty Ekranu Aplikacji
+Uprawnienia Administratora (Admin):
+
+\* Modyfikacja statusu (PATCH): długie przytrzymanie kafelka otwiera okno dialogowe pozwalające zmienić status (Pending, Shipped, Completed), co automatycznie generuje komunikat w kolejce Azure Queue Service.
+
+\* Panel Statystyk: dedykowany ekran analityczny wyświetlający łączny obrót finansowy oraz natywny wykres słupkowy proporcji statusów zamówień.
 
 
 
-| Ekran Główny (Lista Zamówień) | Panel Statystyk (Admin) |
-
-|---|---|
-
-| !\[Ekran Główny](sciezka\_do\_pliku/main\_activity.png) | !\[Statystyki](sciezka\_do\_pliku/stats\_activity.png) |
+\## Zrzuty Ekranu Aplikacji
 
 
 
-| Zarządzanie Statusami | Usuwanie Zamówienia |
+Ekran Główny (Lista Zamówień):
 
-|---|---|
-
-| !\[Statusy](sciezka\_do\_pliku/status\_dialog.png) | !\[Usuwanie](sciezka\_do\_pliku/delete\_dialog.png) |
+!\[Ekran Główny](sciezka\_do\_pliku/main\_activity.png)
 
 
 
-\---
+Panel Statystyk (Admin):
+
+!\[Statystyki](sciezka\_do\_pliku/stats\_activity.png)
 
 
 
-\## 🛠️ Instrukcja Uruchomienia
+Zarządzanie Statusami:
+
+!\[Statusy](sciezka\_do\_pliku/status\_dialog.png)
+
+
+
+Usuwanie Zamówienia:
+
+!\[Usuwanie](sciezka\_do\_pliku/delete\_dialog.png)
+
+
+
+\## Instrukcja Uruchomienia
 
 
 
 1\. Sklonuj repozytorium.
 
-2\. Otwórz projekt w \*\*Android Studio\*\*.
+2\. Otwórz projekt w Android Studio.
 
-3\. Upewnij się, że urządzenie/emulator ma dostęp do Internetu (aplikacja komunikuje się z produkcyjnym API na Azure).
+3\. Dostęp do Internetu.
 
 4\. Uruchom aplikację.
 
