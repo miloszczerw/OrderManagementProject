@@ -66,32 +66,35 @@ Uprawnienia Administratora (Admin):
 
 Ekran Logowania:
 
-!\[Ekran Logowania](<img width="383" height="794" alt="Untitled" src="https://github.com/user-attachments/assets/5dca7b0c-b281-4994-af4d-e4c9872a4d80" />
-)
+<img width="385" height="793" alt="reje" src="https://github.com/user-attachments/assets/dcd947d4-7f8d-45e1-992b-70970d021860" />
 
+Ekran Rejestracji:
 
-Ekran Główny (Lista Zamówień):
+<img width="383" height="794" alt="Untitled" src="https://github.com/user-attachments/assets/5dca7b0c-b281-4994-af4d-e4c9872a4d80" />
 
-!\[Ekran Główny](sciezka\_do\_pliku/main\_activity.png)
+Ekran główny:
 
-
+<img width="362" height="808" alt="glowny" src="https://github.com/user-attachments/assets/f151f4eb-cebc-484d-8b58-dd6a9ce2f734" />
 
 Panel Statystyk (Admin):
 
-!\[Statystyki](sciezka\_do\_pliku/stats\_activity.png)
-
-
+<img width="363" height="804" alt="statystyki" src="https://github.com/user-attachments/assets/2c1d5057-4d4f-4e04-9fd8-0cf6a58d446d" />
 
 Zarządzanie Statusami:
 
-!\[Statusy](sciezka\_do\_pliku/status\_dialog.png)
-
-
+<img width="318" height="158" alt="status" src="https://github.com/user-attachments/assets/e5ab17bb-b471-4c8f-bc99-63a22ce44023" />
 
 Usuwanie Zamówienia:
 
-!\[Usuwanie](sciezka\_do\_pliku/delete\_dialog.png)
+<img width="313" height="138" alt="usun" src="https://github.com/user-attachments/assets/8efaf0f2-7f67-4ba9-8925-7b6cca741f3b" />
 
+Nowe zamówienie:
+
+<img width="365" height="802" alt="nowezam" src="https://github.com/user-attachments/assets/7452dd00-7ece-4295-b45e-476e0e99679c" />
+
+Profil:
+
+<img width="364" height="806" alt="wylog" src="https://github.com/user-attachments/assets/b76792f4-6120-4a97-8f26-31ed56216e28" />
 
 
 \## Instrukcja Uruchomienia
