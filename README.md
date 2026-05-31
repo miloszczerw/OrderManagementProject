@@ -64,6 +64,10 @@ Uprawnienia Administratora (Admin):
 
 \## Zrzuty Ekranu Aplikacji
 
+Ekran Logowania:
+
+!\[Ekran Logowania](<img width="383" height="794" alt="Untitled" src="https://github.com/user-attachments/assets/5dca7b0c-b281-4994-af4d-e4c9872a4d80" />
+)
 
 
 Ekran Główny (Lista Zamówień):
