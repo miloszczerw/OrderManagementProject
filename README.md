@@ -2,7 +2,7 @@
 
 
 
-Aplikacja mobilna (Android) zintegrowana z backendem w chmurze Azure, służąca do wewnętrznego zarządzania procesami logistycznymi i statystykami zamówień w przedsiębiorstwie. System implementuje architekturę opartą o podział uprawnień (RBAC) dla ról Admin oraz Worker.
+Aplikacja mobilna (Android) zintegrowana z backendem w chmurze Azure, służąca do wewnętrznego zarządzania procesami logistycznymi i statystykami zamówień w przedsiębiorstwie. System implementuje architekturę opartą o podział uprawnień dla ról Admin oraz Worker.
 
 
 
